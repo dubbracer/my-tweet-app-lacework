@@ -1,4 +1,4 @@
-name: docker-automation
+name: docker-automation-updated
 on:
   push:
     branches: [ master ]
