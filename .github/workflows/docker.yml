@@ -32,7 +32,7 @@ jobs:
              LW_SCANNER_SCAN_LIBRARY_PACKAGES: true
              LW_SCANNER_DISABLE_UPDATES: true
            with:
-             image_name: dubbracer/my-tweet-app-lacework
+             image_name: dubbrzr/my-tweet-app-lacework
              image_tag: ${{ env.GHA_SHA }}
              fail_only_if_vulnerabilities_fixable: false
              fail_if_critical_vulnerabilities_found: false
