@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-tweet-app
-  namespace: lacework
+  name: my-tweet-app-svc
+  namespace: my-tweet-app
   labels:
     app: my-tweet-app
   annotations:
@@ -20,7 +20,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-tweet-app
-  namespace: lacework
+  namespace: my-tweet-app
   labels:
     app: my-tweet-app
 spec:
@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: my-tweet-app
-        image: securethecloud/my-tweet-app-lacework:latest
+        image: dubbrzr/my-tweet-app-lacework:latest
         ports:
         - containerPort: 5000
         securityContext:
