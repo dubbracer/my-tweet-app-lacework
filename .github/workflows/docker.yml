@@ -53,7 +53,7 @@ jobs:
            uses: docker/build-push-action@v2
            with:
              push: true
-             tags: dubbrzr/my-tweet-app-lacework:${{ env.GHA_SHA }},dubbracer/my-tweet-app-lacework:latest,dubbrzr/my-tweet-app-lacework:production
+             tags: dubbrzr/my-tweet-app-lacework:${{ env.GHA_SHA }},dubbrzr/my-tweet-app-lacework:latest,dubbrzr/my-tweet-app-lacework:production
 
          - name: Configure AWS credentials
            uses: aws-actions/configure-aws-credentials@v1
