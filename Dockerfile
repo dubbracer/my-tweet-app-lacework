@@ -12,6 +12,6 @@ WORKDIR /app
 
 RUN pip3 install --no-cache-dir --requirement ./requirements.txt
 
-EXPOSE 5000
+EXPOSE 32717
 
 CMD ["python3", "/app/app.py"]
