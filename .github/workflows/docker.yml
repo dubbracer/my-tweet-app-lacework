@@ -67,11 +67,11 @@ jobs:
            env:
              KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
            with:
-             args: set image deployment/my-tweet-app my-tweet-app=dubbrzr/my-tweet-app-lacework:${{ env.GHA_SHA }} -n lacework
+             args: set image deployment/my-tweet-app my-tweet-app=dubbrzr/my-tweet-app-lacework:${{ env.GHA_SHA }} -n my-tweet-app
 
          - name: verify deployment
            uses: kodermax/kubectl-aws-eks@master
            env:
              KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
            with:
-             args: rollout status deployment/my-tweet-app -w -n lacework
+             args: rollout status deployment/my-tweet-app -w -n my-tweet-app
