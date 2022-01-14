@@ -12,7 +12,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 5000
+      targetPort: 32717
   selector:
     app: my-tweet-app
 ---
@@ -37,7 +37,7 @@ spec:
       - name: my-tweet-app
         image: dubbrzr/my-tweet-app-lacework:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 32717
         securityContext:
           allowPrivilegeEscalation: false
           privileged: false
