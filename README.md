@@ -5,7 +5,7 @@ Docker demo example application
 
 ![Picture of the example application](https://github.com/automatecloud/my-tweet-app-lacework/blob/master/Pictures/picturenew.png?raw=true)
 
-## For what is this repository? 
+## What is this repository for? 
 
 This application was designed to show how easy it is to integrate Lacework Vulnerability Scanner with Visual Studio Code and GitHub Actions and fully auto manage the deployment of the application inside a AWS EKS Kubernetes cluster.
 
