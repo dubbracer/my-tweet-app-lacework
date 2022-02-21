@@ -6,7 +6,7 @@ import platform
 app = Flask(__name__)
 
 event_text = "Welcome to our new DevSecOps automation Demo Site Feb 8th 2022"
-tweet_text = "I just just enjoyed a fantastic demonstration about shifting left Security with #laceworks"
+tweet_text = "I just enjoyed a fantastic demonstration about shifting left Security with #laceworks"
 
 
 @app.route('/')
