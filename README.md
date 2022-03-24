@@ -3,7 +3,7 @@
 [![IaC](https://app.soluble.cloud/api/v1/public/badges/d8d771e4-ae75-4165-b930-be8138fec878.svg?orgId=392530082060)](https://app.soluble.cloud/repos/details/github.com/automatecloud/my-tweet-app-lacework?orgId=392530082060)  [![CIS](https://app.soluble.cloud/api/v1/public/badges/9a4397f1-a5e7-4198-99a1-02be45cc90e8.svg?orgId=392530082060)](https://app.soluble.cloud/repos/details/github.com/automatecloud/my-tweet-app-lacework?orgId=392530082060)  
 Docker demo example application
 
-![Picture of the example application](https://github.com/automatecloud/my-tweet-app-lacework/blob/master/Pictures/picturenew.png?raw=true)
+![Picture of the example application](https://github.com/dubbracer/my-tweet-app-lacework/blob/master/Pictures/picture.png?raw=true)
 
 ## What is this repository for? 
 
