@@ -66,6 +66,8 @@ jobs:
            uses: kodermax/kubectl-aws-eks@master
            env:
              KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+             KUBECTL_VERSION: "v1.23.6"
+             IAM_VERSION: "0.5.3"
            with:
              args: set image deployment/my-tweet-app my-tweet-app=dubbrzr/my-tweet-app-lacework:${{ env.GHA_SHA }} -n my-tweet-app
 
@@ -73,5 +75,7 @@ jobs:
            uses: kodermax/kubectl-aws-eks@master
            env:
              KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+             KUBECTL_VERSION: "v1.23.6"
+             IAM_VERSION: "0.5.3"
            with:
              args: rollout status deployment/my-tweet-app -w -n my-tweet-app
