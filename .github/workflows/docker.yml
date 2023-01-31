@@ -23,23 +23,18 @@ jobs:
              tags: dubbrzr/my-tweet-app-lacework:${{ env.GHA_SHA }},dubbrzr/my-tweet-app-lacework:latest
              load: true
 
-         - name: lw-scanner
-           uses: timarenz/lw-scanner-action@v0.2.2
-           env:
-             LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }}
-             LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
-             LW_SCANNER_SAVE_RESULTS: true
-             LW_SCANNER_SCAN_LIBRARY_PACKAGES: true
-             LW_SCANNER_DISABLE_UPDATES: true
+         - name: lw-scanner 
+           uses: lacework/lw-scanner-action@v0.6.0
            with:
-             image_name: dubbrzr/my-tweet-app-lacework
-             image_tag: ${{ env.GHA_SHA }}
-             fail_only_if_vulnerabilities_fixable: false
-             scan_library_packages: true
-             fail_if_critical_vulnerabilities_found: false
-             fail_if_high_vulnerabilities_found: false
-             fail_if_medium_vulnerabilities_found: false
-             html_report_file_name: myreport.html
+            LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
+            LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}   
+            IMAGE_NAME: dubbrzr/my-tweet-app-lacework
+            IMAGE_TAG: ${{ env.GHA_SHA }}
+            SAVE_RESULTS_IN_LACEWORK: true
+            SAVE_BUILD_REPORT: true
+            BUILD_REPORT_FILE_NAME: myreport.html
+            SEVERITY_THRESHOLD: fixable
+            USE_POLICY: true
 
          - name: Login to DockerHub
            uses: docker/login-action@v1
