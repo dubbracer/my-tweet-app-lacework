@@ -35,12 +35,10 @@ jobs:
              image_name: dubbrzr/my-tweet-app-lacework
              image_tag: ${{ env.GHA_SHA }}
              fail_only_if_vulnerabilities_fixable: false
+             scan_library_packages: true
              fail_if_critical_vulnerabilities_found: false
              fail_if_high_vulnerabilities_found: false
              fail_if_medium_vulnerabilities_found: false
-             fail_if_low_vulnerabilities_found: false
-             fail_if_info_vulnerabilities_found: false
-             save_html_report: false
              html_report_file_name: myreport.html
 
          - name: Login to DockerHub
