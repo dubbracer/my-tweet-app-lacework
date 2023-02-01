@@ -1,5 +1,5 @@
 # Use Alpine as base
-FROM alpine:edge
+FROM alpine:3.17
 #FROM alpine:3.10
 
 # Maintainer
@@ -11,7 +11,7 @@ COPY ./app /app
 
 WORKDIR /app
 
-RUN pip3 install --no-cache --no-cache-dir --requirement ./requirements.txt
+RUN pip3 install -r ./requirements.txt
 
 EXPOSE 5000
 
