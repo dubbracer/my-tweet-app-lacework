@@ -14,7 +14,7 @@ app = Flask(__name__)
 app_name = 'Demo Application for events'
 
 event_text = "Welcome, to our new DevSecOps automation Demo Site in February 2023"
-tweet_text = "I just enjoyed a fantastic demonstration about shifting left Security with #lacework"
+tweet_text = "I just enjoyed a fantastic demonstration about shifting left Security with #lacework in Berlin"
 
 
 @app.route('/')
